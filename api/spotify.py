@@ -23,7 +23,7 @@ FALLBACK_THEME = "spotify.html.j2"
 REFRESH_TOKEN_URL = "https://accounts.spotify.com/api/token"
 NOW_PLAYING_URL = "https://api.spotify.com/v1/me/player/currently-playing"
 RECENTLY_PLAYING_URL = (
-    "https://api.spotify.com/v1/me/player/recently-played?limit=10"
+    "https://api.spotify.com/v1/me/player/recently-played?limit=1"
 )
 
 app = Flask(__name__)
@@ -121,7 +121,7 @@ def makeSVG(data, background_color, border_color):
         item = recentPlays["items"][itemIndex]["track"]
     else:
         item = data["item"]
-        currentStatus = "Is playing:"
+        currentStatus = "Currently listening to:"
 
     if item["album"]["images"] == []:
         image = PLACEHOLDER_IMAGE
