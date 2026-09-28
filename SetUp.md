@@ -176,7 +176,7 @@ You can customize the appearance of your widget using URL query parameters:
 | `background_color` | Card background color (hex, without `#`) | `181414` | `0d1117` |
 | `border_color` | Card border color (hex, without `#`) | `181414` | `ffffff` |
 | `background_type` | Background style: `color`, `blur_dark`, or `blur_light` | `color` | `blur_dark` |
-| `show_status` | Show "Vibing to:" or "Recently played:" text | `false` | `true` |
+| `show_status` | Show "Currently listening to:" or "Was playing:" text | `false` | `true` |
 
 #### Background Types
 

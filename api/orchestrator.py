@@ -377,7 +377,7 @@ def make_svg(
         background_color: Hex color for background (without #)
         border_color: Hex color for border (without #)
         background_type: Type of background ("color", "blur_dark", "blur_light")
-        show_status: Whether to show "Vibing to:" / "Recently played:" text
+        show_status: Whether to show "Currently listening to:" / "Was playing:" text
         is_compact: Whether to use compact mode layout
     
     Returns:
@@ -458,7 +458,7 @@ def make_svg(
 
     # Set status text based on playing state
     is_playing = track_data.get("is_playing", False)
-    status = "Vibing to:" if is_playing else "Recently played:"
+    status = "Currently listening to:" if is_playing else "Was playing:"
 
     # Calculate marquee params from raw text (before XML escaping)
     raw_song = track_data.get("track_name", "Unknown Track")
